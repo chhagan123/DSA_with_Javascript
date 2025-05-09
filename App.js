@@ -43,3 +43,27 @@ function printZigzag(arr) {
 }
 
 printZigzag([[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]])
+
+
+// unique element in aarray 
+
+function unique(arr){
+ 
+    let sum =0;
+    for(let i=0;i<arr.length;i++){
+        let count = 0;
+        for(let j=0;j<arr.length;j++){
+            if(arr[i] ==arr[j]){
+                count++;
+            }
+        }
+        if(count == 1){
+            console.log(arr[i])
+            sum += arr[i]
+        }
+    }
+   
+     console.log(sum)
+   }
+   
+   unique([1,2,3,4,3,2,1])
