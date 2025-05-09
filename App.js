@@ -45,7 +45,7 @@ function printZigzag(arr) {
 printZigzag([[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]])
 
 
-// unique element in aarray 
+// unique element in aarray // hackerrank question
 
 function unique(arr){
  
@@ -67,3 +67,33 @@ function unique(arr){
    }
    
    unique([1,2,3,4,3,2,1])
+
+
+   /* HackerLand University has the following grading policy:
+
+Every student receives a  in the inclusive range from  to .
+Any  less than  is a failing grade.
+Sam is a professor at the university and likes to round each student's  according to these rules:
+
+If the difference between the  and the next multiple of  is less than , round  up to the next multiple of .
+If the value of  is less than , no rounding occurs as the result will still be a failing grade.*/
+
+// hacker Rank question 
+
+function gradingStudents(grades) {
+    let result = [];
+    for(let i=0;i<grades.length;i++){
+        if(grades[i]<38){
+            result.push(grades[i])
+        }else if(grades[i] >= 38 && (grades[i]+2)%5 == 0){
+              result.push(grades[i]+2)
+        }else if(grades[i] >= 38 && (grades[i]+1)%5 == 0){
+               result.push(grades[i]+1)
+        }else {
+               result.push(grades[i])
+        }
+    }
+    return result;
+    }
+    
+   console.log(gradingStudents([73,67,38,33]))
