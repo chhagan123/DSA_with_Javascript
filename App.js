@@ -96,4 +96,64 @@ function gradingStudents(grades) {
     return result;
     }
     
-   console.log(gradingStudents([73,67,38,33]))
+   console.log(gradingStudents([73,67,38,33]))//
+
+
+   /// Sorting technique 
+
+
+   // 1) Selection Sort 
+
+   function selection(arr) {
+    for(let i=0;i<arr.length;i++) {
+        let min = arr[i];
+        for(let j=i+1;j<arr.length;j++){
+            if(min>arr[j]){
+                min = arr[j];
+                let temp = arr[i]
+                arr[i] = arr[j];
+                arr[j] = temp;
+                
+            }
+        }
+    }
+    console.log(arr)
+    
+}
+
+selection([13,46,24,52,20,9]);
+
+// bubble sort 
+
+ function bubblesort (arr) {
+    for(let i =arr.length ; i>0;i--){
+        for(let j =0 ; j<arr.length;j++){
+            if(arr[j] > arr[j+1]){
+                let temp = arr[j+1];
+                  arr[j+1] = arr[j];
+                  arr[j] = temp;
+            }
+        }
+    }
+    console.log(`bubblesort ${arr}`)
+
+ }
+ bubblesort([13,46,24,52,20,9]);
+
+ // insertion sort 
+
+ function insertionsort(arr) {
+    for(let i=1;i<arr.length;i++){
+        for(let j=i;j>0;j--){
+            if(arr[j]<arr[j-1]){
+                let temp = arr[j-1];
+                arr[j-1] = arr[j];
+                arr[j] = temp
+            }
+        }
+    }
+    console.log(`insertionsort ${arr}`)
+ }
+ insertionsort([13,46,24,52,20,9]);
+
+
