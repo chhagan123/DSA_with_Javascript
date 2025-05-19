@@ -157,3 +157,14 @@ selection([13,46,24,52,20,9]);
  insertionsort([13,46,24,52,20,9]);
 
 
+// Problem: Print your Name N times using recursion
+
+function PrintNname(N) {
+    if(N==0) {
+        return;
+    }
+    PrintNname(N-1);
+    console.log(N,"Chhagan")
+}
+
+PrintNname(5)
