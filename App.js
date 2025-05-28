@@ -166,5 +166,18 @@ function PrintNname(N) {
     PrintNname(N-1);
     console.log(N,"Chhagan")
 }
-
 PrintNname(5)
+
+
+// Problem : Factorial 
+
+function Facto(N) {
+     if(N==0) {
+        return 1;
+     }
+     console.log(N)
+return Facto(N-1) * N;
+ 
+   
+}
+console.log(Facto(5));
